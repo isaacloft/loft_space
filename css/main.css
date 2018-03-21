@@ -84,12 +84,12 @@ html {
   }
   a{
 
-     color: inherit; /* blue colors for links too */
-     text-decoration: none; /* no underline */
- }
+   color: inherit; /* blue colors for links too */
+   text-decoration: none; /* no underline */
+}
 
- .footer-container,
- .main aside {
+.footer-container,
+.main aside {
     border-top: 20px solid #e44d26;
 }
 
@@ -172,6 +172,7 @@ html {
 
    .intro_block{
     font: 30px Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New;
+    font-weight: 100;
     color:#009900 !important;
     
     padding-top:35%;
@@ -205,7 +206,7 @@ html {
     color:#00e300;
     font-size: 32px;
 
-}*/
+    }*/
 
 
 

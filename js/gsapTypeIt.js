@@ -142,7 +142,7 @@ var gsapTypeIt = function() {
     gsapTypeIt.prototype.clear = function() {
     	var rotateWordsOp = this.options.rotateWordsOptions;
     	
-    	TweenLite.set(this.el, {background:rotateWordsOp.clear_background, color:'white', delay: rotateWordsOp.clearingDuration/2 });
+    	TweenLite.set(this.el, {background:"#008400", color:'white', delay: rotateWordsOp.clearingDuration/2 });
     	TweenLite.delayedCall(rotateWordsOp.clearingDuration/2, setCurstorClassName, [ this.cursor, "hide"]);
 
     	TweenLite.set(this.el, {text:{value:""}, background:rotateWordsOp.original_background, color:"#009900",  delay: rotateWordsOp.clearingDuration} );
