@@ -6,58 +6,59 @@ html {
     line-height: 1.4;
 }
 
-::-moz-selection {
+/*::-moz-selection {
     background: #b3d4fc;
     text-shadow: none;
-}
+    }*/
 
-::selection {
+/*::selection {
     background: #b3d4fc;
     text-shadow: none;
-}
+    }*/
 
-hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
-}
+    hr {
+        display: block;
+        height: 1px;
+        border: 0;
+        border-top: 1px solid #ccc;
+        margin: 1em 0;
+        padding: 0;
+    }
 
-audio,
-canvas,
-iframe,
-img,
-svg,
-video {
-    vertical-align: middle;
-}
+    audio,
+    canvas,
+    iframe,
+    img,
+    svg,
+    video {
+        vertical-align: middle;
+    }
 
-fieldset {
-    border: 0;
-    margin: 0;
-    padding: 0;
-}
+    fieldset {
+        border: 0;
+        margin: 0;
+        padding: 0;
+    }
 
-textarea {
-    resize: vertical;
-}
+    textarea {
+        resize: vertical;
+    }
 
-.browserupgrade {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
-}
+    .browserupgrade {
+        margin: 0.2em 0;
+        background: #ccc;
+        color: #000;
+        padding: 0.2em 0;
+    }
 
 
 /* ===== Initializr Styles ==================================================
    Author: Jonathan Verrecchia - verekia.com/initializr/responsive-template
    ========================================================================== */
 
-body {
-    font: 16px/26px Helvetica, Helvetica Neue, Arial;
+   body {
+    background-color: #17172d   ;
+    font: 30px Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New;
 }
 
 .wrapper {
@@ -67,21 +68,34 @@ body {
 
 /* ===================
     ALL: Orange Theme
-   =================== */
+    =================== */
 
-.header-container {
-    border-bottom: 20px solid #e44d26;
-}
+    .header-container {
+        text-align: left;
+        padding:8px;
+        color:#17172d;
+        font-size:28px;
+        text-shadow: 0 0 1px #00cc00, 0 0 3px #00cc00
 
-.footer-container,
-.main aside {
+
+    }
+    .header-container a:hover{
+      color: #00e300;  
+  }
+  a{
+
+     color: inherit; /* blue colors for links too */
+     text-decoration: none; /* no underline */
+ }
+
+ .footer-container,
+ .main aside {
     border-top: 20px solid #e44d26;
 }
 
 .header-container,
 .footer-container,
 .main aside {
-    background: #f16529;
 }
 
 .title {
@@ -90,72 +104,108 @@ body {
 
 /* ==============
     MOBILE: Menu
-   ============== */
+    ============== */
 
-nav ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-}
+    nav ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
 
-nav a {
-    display: block;
-    margin-bottom: 10px;
-    padding: 15px 0;
+    nav a {
+        display: block;
+        margin-bottom: 10px;
+        padding: 15px 0;
 
-    text-align: center;
-    text-decoration: none;
-    font-weight: bold;
+        text-align: center;
+        text-decoration: none;
+        font-weight: bold;
 
-    color: white;
-    background: #e44d26;
-}
+        color: white;
+        background: #e44d26;
+    }
 
-nav a:hover,
-nav a:visited {
-    color: white;
-}
+    nav a:hover,
+    nav a:visited {
+        color: white;
+    }
 
-nav a:hover {
-    text-decoration: underline;
-}
+    nav a:hover {
+        text-decoration: underline;
+    }
 
 /* ==============
     MOBILE: Main
-   ============== */
+    ============== */
 
-.main {
-    padding: 30px 0;
-}
+    .main {
+        /*color:white;*/
+        padding: 5px 5px;
+    }
 
-.main article h1 {
-    font-size: 2em;
-}
+    .main article h1 {
+        font-size: 2em;
+    }
 
-.main aside {
-    color: white;
-    padding: 0px 5% 10px;
-}
+    .main aside {
+        color: white;
+        padding: 0px 5% 10px;
+    }
 
-.footer-container footer {
-    color: white;
-    padding: 20px 0;
-}
+    .footer-container footer {
+        color: white;
+        padding: 20px 0;
+    }
 
 /* ===============
     ALL: IE Fixes
-   =============== */
+    =============== */
 
-.ie7 .title {
-    padding-top: 20px;
-}
+    .ie7 .title {
+        padding-top: 20px;
+    }
 
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
 
 
+   .intro_block{
+    font: 30px Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New;
+    color:#009900 !important;
+    
+    padding-top:45%;
+    text-align: center;
+    margin: auto;
+    left: 0;
+    right: 0;
 
+
+}
+
+.gsapCursor.blink {
+  display: inline-block;
+  animation: 1s blinkCursor step-end infinite;
+}
+
+.gsapCursor.hide {
+  display: none;
+}
+
+@keyframes blinkCursor {
+  from, to {
+    color: transparent;
+}
+50% {
+    color: #009900;
+}
+}
+
+/*#block1 span:hover{
+    color:#00e300;
+    font-size: 32px;
+
+}*/
 
 
 
@@ -172,11 +222,11 @@ nav a:hover {
    Media Queries
    ========================================================================== */
 
-@media only screen and (min-width: 480px) {
+   @media only screen and (min-width: 480px) {
 
 /* ====================
     INTERMEDIATE: Menu
-   ==================== */
+    ==================== */
 
     nav a {
         float: left;
@@ -196,7 +246,7 @@ nav a:hover {
 
 /* ========================
     INTERMEDIATE: IE Fixes
-   ======================== */
+    ======================== */
 
     nav ul li {
         display: inline;
@@ -211,18 +261,17 @@ nav a:hover {
 
 /* ====================
     WIDE: CSS3 Effects
-   ==================== */
+    ==================== */
 
     .header-container,
     .main aside {
-        -webkit-box-shadow: 0 5px 10px #aaa;
-           -moz-box-shadow: 0 5px 10px #aaa;
-                box-shadow: 0 5px 10px #aaa;
-    }
+     /*   -webkit-box-shadow: 0 5px 10px #aaa;
+     -moz-box-shadow: 0 5px 10px #aaa;*/
+ }
 
 /* ============
     WIDE: Menu
-   ============ */
+    ============ */
 
     .title {
         float: left;
@@ -235,7 +284,7 @@ nav a:hover {
 
 /* ============
     WIDE: Main
-   ============ */
+    ============ */
 
     .main article {
         float: left;
@@ -252,7 +301,7 @@ nav a:hover {
 
 /* ===============
     Maximal Width
-   =============== */
+    =============== */
 
     .wrapper {
         width: 1026px; /* 1140px - 10% for margins */
@@ -264,7 +313,7 @@ nav a:hover {
    Helper classes
    ========================================================================== */
 
-.hidden {
+   .hidden {
     display: none !important;
     visibility: hidden;
 }
@@ -312,7 +361,7 @@ nav a:hover {
    Print styles
    ========================================================================== */
 
-@media print {
+   @media print {
     *,
     *:before,
     *:after {
