@@ -4,8 +4,8 @@
     <msapplication>
         <tile>
             <square70x70logo src="db.png"/>
-            <square150x150logo src="tile.png"/>
-            <wide310x150logo src="tile-wide.png"/>
+            <square150x150logo src="db.png"/>
+            <wide310x150logo src="db.png"/>
             <square310x310logo src="db.png"/>
         </tile>
     </msapplication>
