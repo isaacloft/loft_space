@@ -59,6 +59,7 @@ html {
    body {
     background-color: #17172d   ;
     font: 30px Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New;
+    overflow: hidden;   
 }
 
 .wrapper {
@@ -169,18 +170,32 @@ html {
    Author's custom styles
    ========================================================================== */
 
+.main-container{
+    display:flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
 
-   .intro_block{
+.header-container{
+    flex:1;
+}
+
+.main{
+    display: flex;
+    align-items: center;
+    flex:9;
+}
+
+
+.intro_block{
     font: 30px Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New;
     font-weight: 100;
     color:#009900 !important;
     
-    padding-top:35%;
     text-align: left;
     margin: auto;
     left: 0;
     right: 0;
-
 
 }
 
@@ -201,13 +216,6 @@ html {
     color: #009900;
 }
 }
-
-/*#block1 span:hover{
-    color:#00e300;
-    font-size: 32px;
-
-    }*/
-
 
 
 

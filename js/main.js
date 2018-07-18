@@ -4,7 +4,7 @@ var tlMax = new TimelineMax();
 // Type animation with GSAP
 
 
-intro_Animation();
+// intro_Animation();
 
 
 function init_typing(){
@@ -13,10 +13,10 @@ function init_typing(){
 		el: document.getElementById('block1'),
 		elClass: 'intro',
 		cursorSign: '_',
-		word: 'Hello, welcome to the Loft...',
+		word: 'Hello, welcome to Loft..<br>This is a lab for my code... <br>which involves',
 		delay:0,
-		duration: 5,
-		easing: Power4.easeInOut
+		duration: 10,
+		easing: Power1.easeIn
 	});
 
 }
@@ -29,10 +29,10 @@ function init_rotating(){
 		el: document.getElementById('block2'),
 		rotateWords: true,
 		cursorSign: '_',
-		delay:0,
+		delay:2,
 		autoPlay: true,
 		rotateWordsOptions : {
-			wordsList : ['humans', 'dudes', 'my friends...<br>'],
+			wordsList : ['frontend tricks', 'Server side configuration', 'Or more...<br>'],
 			cycle: false,
 			clear: true
 
@@ -52,7 +52,7 @@ function init_showCase(){
 		el: document.getElementById('block3'),
 		charterPerSecond: 8,
 		cursorSign: '_',
-		word: 'You are watching demos of front end animation, and the reference can be found in the console..',
+		word: 'I prefer color contrast and keep things simple..',
 		delay:0,
 		
 	});
@@ -73,8 +73,8 @@ function intro_Animation(){
 
 	tlMax
 	.to(['#intro_block'], 0, {opacity:1, onComplete:init_typing})
-	.to(['#intro_block'], 0, {opacity:1, onComplete:init_rotating},"+=5.5")
-	.to(['#intro_block'], 0, {opacity:1, onComplete:init_showCase},"+=12")
+	.to(['#intro_block'], 0, {opacity:1, onComplete:init_rotating},"+=11")
+	.to(['#intro_block'], 0, {opacity:1, onComplete:init_showCase},"+=15")
 	.to(['#intro_block'], 0, {opacity:1, onComplete:typingAnimation_reference},"+=1")
 
 
