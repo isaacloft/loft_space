@@ -6,7 +6,7 @@ var tlMax = new TimelineMax();
 // intro_Animation();
 
 function insert_directory(id){
-    $("<br><span class='directory'>isaacguan.com/loft/home/</span>").insertBefore("#"+id);
+    $("<br><span class='directory shadow'>~/loft/home/</span>").insertBefore("#"+id);
 }
 function init_typing() {
 
