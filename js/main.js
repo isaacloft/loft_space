@@ -71,7 +71,7 @@ function init_input() {
         el: document.getElementById('block4'),
         charterPerSecond: 8,
         cursorSign: '',
-        word: ' Continue browsing? [yes/no]',
+        word: ' Do you know the code? [yes/no]',
 
         delay: 1,
 
@@ -82,7 +82,7 @@ function init_input() {
 function close_intro(){
 var tlMax = new TimelineMax();
     tlMax
-	.to(['#intro_block'], 1, {height:0,y:-50});
+	.to(['#intro_block'], 1, {height:0});
 }
 
 function show_input() {
