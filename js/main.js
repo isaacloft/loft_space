@@ -5,7 +5,9 @@ var tlMax = new TimelineMax();
 
 // intro_Animation();
 
-
+function insert_directory(id){
+    $("<br><span class='directory'>isaacguan.com/loft/home/</span>").insertBefore("#"+id);
+}
 function init_typing() {
 
     var easingPower4 = new gsapTypeIt({
@@ -59,7 +61,7 @@ function init_showCase() {
 }
 
 function init_input() {
-
+    insert_directory("block4");
     var last_cursor = $(".gsapCursor");
     last_cursor.remove();
 
@@ -69,7 +71,8 @@ function init_input() {
         el: document.getElementById('block4'),
         charterPerSecond: 8,
         cursorSign: '',
-        word: 'Continue browsing?<br>[yes/no]',
+        word: ' Continue browsing? [yes/no]',
+
         delay: 1,
 
     });
@@ -83,7 +86,8 @@ var tlMax = new TimelineMax();
 }
 
 function show_input() {
-    $(".question").css("display", "block");
+    insert_directory("question");
+    $(".question").css("display", "inline-block");
     var input = document.getElementById("question_input");
     var value;
 

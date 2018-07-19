@@ -6,60 +6,63 @@ html {
     line-height: 1.4;
 }
 
+
 /*::-moz-selection {
     background: #b3d4fc;
     text-shadow: none;
     }*/
+
 
 /*::selection {
     background: #b3d4fc;
     text-shadow: none;
     }*/
 
-    hr {
-        display: block;
-        height: 1px;
-        border: 0;
-        border-top: 1px solid #ccc;
-        margin: 1em 0;
-        padding: 0;
-    }
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
 
-    audio,
-    canvas,
-    iframe,
-    img,
-    svg,
-    video {
-        vertical-align: middle;
-    }
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
 
-    fieldset {
-        border: 0;
-        margin: 0;
-        padding: 0;
-    }
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
 
-    textarea {
-        resize: vertical;
-    }
+textarea {
+    resize: vertical;
+}
 
-    .browserupgrade {
-        margin: 0.2em 0;
-        background: #ccc;
-        color: #000;
-        padding: 0.2em 0;
-    }
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
 
 
 /* ===== Initializr Styles ==================================================
    Author: Jonathan Verrecchia - verekia.com/initializr/responsive-template
    ========================================================================== */
 
-   body {
-    background-color: #17172d   ;
-    font: 30px Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New;
-    overflow: hidden;   
+body {
+    background-color: #17172d;
+    font: 30px Consolas, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New;
+    overflow: hidden;
 }
 
 .wrapper {
@@ -67,26 +70,29 @@ html {
     margin: 0 5%;
 }
 
+
 /* ===================
     ALL: Orange Theme
     =================== */
 
-    .header-container {
-        text-align: left;
-        padding:8px;
-        color:#17172d;
-        font-size:28px;
-        text-shadow: 0 0 1px #00cc00, 0 0 3px #00cc00
+.header-container {
+    text-align: left;
+    padding: 8px;
+    color: #17172d;
+    font-size: 28px;
+    text-shadow: 0 0 1px #00cc00, 0 0 3px #00cc00
+}
 
+.header-container a:hover {
+    color: #00e300;
+}
 
-    }
-    .header-container a:hover{
-      color: #00e300;  
-  }
-  a{
+a {
 
-   color: inherit; /* blue colors for links too */
-   text-decoration: none; /* no underline */
+    color: inherit;
+    /* blue colors for links too */
+    text-decoration: none;
+    /* no underline */
 }
 
 .footer-container,
@@ -96,136 +102,145 @@ html {
 
 .header-container,
 .footer-container,
-.main aside {
-}
+.main aside {}
 
 .title {
     color: white;
 }
 
+
 /* ==============
     MOBILE: Menu
     ============== */
 
-    nav ul {
-        margin: 0;
-        padding: 0;
-        list-style-type: none;
-    }
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
 
-    nav a {
-        display: block;
-        margin-bottom: 10px;
-        padding: 15px 0;
+nav a {
+    display: block;
+    margin-bottom: 10px;
+    padding: 15px 0;
 
-        text-align: center;
-        text-decoration: none;
-        font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
 
-        color: white;
-        background: #e44d26;
-    }
+    color: white;
+    background: #e44d26;
+}
 
-    nav a:hover,
-    nav a:visited {
-        color: white;
-    }
+nav a:hover,
+nav a:visited {
+    color: white;
+}
 
-    nav a:hover {
-        text-decoration: underline;
-    }
+nav a:hover {
+    text-decoration: underline;
+}
+
 
 /* ==============
     MOBILE: Main
     ============== */
 
-    .main {
-        /*color:white;*/
-        padding: 5px 5px;
-    }
+.main {
+    /*color:white;*/
+    padding: 5px 5px;
+}
 
-    .main article h1 {
-        font-size: 2em;
-    }
+.main article h1 {
+    font-size: 2em;
+}
 
-    .main aside {
-        color: white;
-        padding: 0px 5% 10px;
-    }
+.main aside {
+    color: white;
+    padding: 0px 5% 10px;
+}
 
-    .footer-container footer {
-        color: white;
-        padding: 20px 0;
-    }
+.footer-container footer {
+    color: white;
+    padding: 20px 0;
+}
+
 
 /* ===============
     ALL: IE Fixes
     =============== */
 
-    .ie7 .title {
-        padding-top: 20px;
-    }
+.ie7 .title {
+    padding-top: 20px;
+}
+
 
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
 
-.main-container{
-    display:flex;
+.main-container {
+    display: flex;
     flex-direction: column;
     min-height: 100vh;
     padding: 10px;
 }
 
-.header-container{
-    flex:1;
+.header-container {
+    flex: 1;
 }
 
-.header_container{
-   display: flex;
+.header_container {
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.main{
-    display: flex;
+.main {
     align-items: center;
-    flex:9;
+    flex: 9;
 }
 
-.intro_block{
+.intro_block {
     overflow: hidden;
 }
 
+.directory {
+    background-color: #1666e5;
+    color: #17172d;
+}
 
-.question,.intro_block{
-    font: 30px Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New;
+
+.question,
+.intro_block {
+    font: 30px Consolas, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New;
     font-weight: 100;
-    color:#009900 !important;
-    
+    color: #009900 !important;
+
     text-align: left;
     margin: auto;
     left: 0;
     right: 0;
-
 }
 
 
 
-.question_input{
-     background-color: #17172d;
-     border: none;
-     cursor: blink
+.question_input {
+    background-color: #17172d;
+    border: none;
+    cursor: blink
 }
 
 .cursor {
     position: relative;
 }
-.cursor i {
+
+.cursor,
+.directory i {
     position: absolute;
     width: 1px;
     height: 80%;
-    background-color:  #009900;
+    background-color: #009900;
     left: 5px;
     top: 10%;
     animation-name: blink;
@@ -234,46 +249,49 @@ html {
     opacity: 1;
 }
 
-.question_input:focus{
-     outline: none;
+.question_input:focus {
+    outline: none;
 }
-.cursor input:focus + i {
+
+.cursor input:focus+i {
     display: none;
 }
 
-.cursor input::-webkit-input-placeholder{
 
-}
 
-.content_block{
-        box-shadow: 1px 1px 2px 1px #9dd49d;
-
+.content_block {
+    box-shadow: 1px 1px 2px 1px #9dd49d;
 }
 
 @keyframes blink {
-    from { opacity: 1; }
-    to { opacity: 0; }
-
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
 }
 
 
 .gsapCursor.blink {
-  display: inline-block;
-  animation: 1s blinkCursor step-end infinite;
+    display: inline-block;
+    animation: 1s blinkCursor step-end infinite;
 }
 
 .gsapCursor.hide {
-  display: none;
+    display: none;
 }
 
 @keyframes blinkCursor {
-  from, to {
-    color: transparent;
+    from,
+    to {
+        color: transparent;
+    }
+    50% {
+        color: #009900;
+    }
 }
-50% {
-    color: #009900;
-}
-}
+
 
 
 
@@ -289,12 +307,10 @@ html {
    Media Queries
    ========================================================================== */
 
-   @media only screen and (min-width: 480px) {
-
-/* ====================
+@media only screen and (min-width: 480px) {
+    /* ====================
     INTERMEDIATE: Menu
     ==================== */
-
     nav a {
         float: left;
         width: 27%;
@@ -310,11 +326,9 @@ html {
     nav li:last-child a {
         margin-right: 0;
     }
-
-/* ========================
+    /* ========================
     INTERMEDIATE: IE Fixes
     ======================== */
-
     nav ul li {
         display: inline;
     }
@@ -325,21 +339,17 @@ html {
 }
 
 @media only screen and (min-width: 768px) {
-
-/* ====================
+    /* ====================
     WIDE: CSS3 Effects
     ==================== */
-
     .header-container,
     .main aside {
-     /*   -webkit-box-shadow: 0 5px 10px #aaa;
+        /*   -webkit-box-shadow: 0 5px 10px #aaa;
      -moz-box-shadow: 0 5px 10px #aaa;*/
- }
-
-/* ============
+    }
+    /* ============
     WIDE: Menu
     ============ */
-
     .title {
         float: left;
     }
@@ -348,11 +358,9 @@ html {
         float: right;
         width: 38%;
     }
-
-/* ============
+    /* ============
     WIDE: Main
     ============ */
-
     .main article {
         float: left;
         width: 57%;
@@ -365,22 +373,22 @@ html {
 }
 
 @media only screen and (min-width: 1140px) {
-
-/* ===============
+    /* ===============
     Maximal Width
     =============== */
-
     .wrapper {
-        width: 1026px; /* 1140px - 10% for margins */
+        width: 1026px;
+        /* 1140px - 10% for margins */
         margin: 0 auto;
     }
 }
+
 
 /* ==========================================================================
    Helper classes
    ========================================================================== */
 
-   .hidden {
+.hidden {
     display: none !important;
     visibility: hidden;
 }
@@ -424,11 +432,12 @@ html {
     *zoom: 1;
 }
 
+
 /* ==========================================================================
    Print styles
    ========================================================================== */
 
-   @media print {
+@media print {
     *,
     *:before,
     *:after {
