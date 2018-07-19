@@ -7,6 +7,7 @@ html {
 }
 
 
+
 /*::-moz-selection {
     background: #b3d4fc;
     text-shadow: none;
@@ -55,6 +56,7 @@ textarea {
 
 
 
+
 /* ===== Initializr Styles ==================================================
    Author: Jonathan Verrecchia - verekia.com/initializr/responsive-template
    ========================================================================== */
@@ -69,6 +71,7 @@ body {
     width: 90%;
     margin: 0 5%;
 }
+
 
 
 /* ===================
@@ -109,6 +112,7 @@ a {
 }
 
 
+
 /* ==============
     MOBILE: Menu
     ============== */
@@ -142,6 +146,7 @@ nav a:hover {
 }
 
 
+
 /* ==============
     MOBILE: Main
     ============== */
@@ -166,6 +171,7 @@ nav a:hover {
 }
 
 
+
 /* ===============
     ALL: IE Fixes
     =============== */
@@ -173,6 +179,7 @@ nav a:hover {
 .ie7 .title {
     padding-top: 20px;
 }
+
 
 
 /* ==========================================================================
@@ -197,8 +204,10 @@ nav a:hover {
 }
 
 .main {
-    align-items: center;
+    display: flex;
     flex: 9;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .intro_block {
@@ -211,16 +220,15 @@ nav a:hover {
 }
 
 
-.question,
 .intro_block {
     font: 30px Consolas, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New;
     font-weight: 100;
     color: #009900 !important;
+    /*flex:3;*/
+}
 
-    text-align: left;
-    margin: auto;
-    left: 0;
-    right: 0;
+.content_block{
+
 }
 
 
@@ -260,7 +268,7 @@ nav a:hover {
 
 
 .content_block {
-    box-shadow: 1px 1px 2px 1px #9dd49d;
+    /*box-shadow: 1px 1px 2px 1px #9dd49d;*/
 }
 
 @keyframes blink {
@@ -291,6 +299,7 @@ nav a:hover {
         color: #009900;
     }
 }
+
 
 
 
@@ -384,6 +393,7 @@ nav a:hover {
 }
 
 
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
@@ -431,6 +441,7 @@ nav a:hover {
 .clearfix {
     *zoom: 1;
 }
+
 
 
 /* ==========================================================================
