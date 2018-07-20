@@ -71,7 +71,7 @@ function init_input() {
         el: document.getElementById('block4'),
         charterPerSecond: 18,
         cursorSign: '',
-        word: ' Do you know the code?',
+        word: ' What\'s the code?',
 
         delay: 1,
 
