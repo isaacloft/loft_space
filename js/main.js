@@ -16,7 +16,7 @@ function init_typing() {
         cursorSign: '_',
         word: 'Hello, welcome to Loft..<br>A place for my code',
         delay: 0,
-        duration: 5,
+        duration: 2,
         easing: Power1.easeIn
     });
 
@@ -69,7 +69,7 @@ function init_input() {
 
 
         el: document.getElementById('block4'),
-        charterPerSecond: 8,
+        charterPerSecond: 18,
         cursorSign: '',
         word: ' Do you know the code? [yes/no]',
 
@@ -96,7 +96,8 @@ function show_input() {
         if (event.keyCode === 13) {
         	value = input.value.toLowerCase().trim();
         	if(value === "yes"){
-        		close_intro();
+        		// close_intro();
+                appendBannerHTML("masthead","./asset/banner/bupa_Bodymovin/index.html");
         	}
         }
     });
@@ -116,12 +117,24 @@ function intro_Animation() {
 
     tlMax
         .to(['#intro_block'], 0, { opacity: 1, onComplete: init_typing })
-        .to(['#intro_block'], 0, { opacity: 1, onComplete: init_input }, "+=5")
-        .to(['#intro_block'], 0, { opacity: 1, onComplete: show_input }, "+=5")
+        .to(['#intro_block'], 0, { opacity: 1, onComplete: init_input }, "+=2")
+        .to(['#intro_block'], 0, { opacity: 1, onComplete: show_input }, "+=3")
 
 
     ;
 
+}
+// ./asset/banner/bupa_Bodymovin/index.html
+function appendBannerHTML(size, path){
+    var size = size;
+    var path = path;
+    const Item = ({ size,path }) =>
+`<div class="${size}"><object type="text/html" id="2" class="${size}_object" data="${path}"></object></div>`;
+
+    $(".content_block").append([{
+        size: size,
+        path:path
+    }].map(Item));
 }
 
 

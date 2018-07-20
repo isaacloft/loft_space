@@ -8,6 +8,7 @@ html {
 
 
 
+
 /*::-moz-selection {
     background: #b3d4fc;
     text-shadow: none;
@@ -57,6 +58,7 @@ textarea {
 
 
 
+
 /* ===== Initializr Styles ==================================================
    Author: Jonathan Verrecchia - verekia.com/initializr/responsive-template
    ========================================================================== */
@@ -71,6 +73,7 @@ body {
     width: 90%;
     margin: 0 5%;
 }
+
 
 
 
@@ -113,6 +116,7 @@ a {
 
 
 
+
 /* ==============
     MOBILE: Menu
     ============== */
@@ -147,6 +151,7 @@ nav a:hover {
 
 
 
+
 /* ==============
     MOBILE: Main
     ============== */
@@ -172,6 +177,7 @@ nav a:hover {
 
 
 
+
 /* ===============
     ALL: IE Fixes
     =============== */
@@ -179,6 +185,7 @@ nav a:hover {
 .ie7 .title {
     padding-top: 20px;
 }
+
 
 
 
@@ -227,9 +234,7 @@ nav a:hover {
     /*flex:3;*/
 }
 
-.content_block{
-
-}
+.content_block {}
 
 
 
@@ -271,6 +276,23 @@ nav a:hover {
     /*box-shadow: 1px 1px 2px 1px #9dd49d;*/
 }
 
+.masthead {
+    width: 970px;
+    height: 250px;
+    top: 100px;
+    position: relative;
+    right: 100px;
+}
+
+.masthead_object{
+     width: 970px;
+    height: 250px;
+    top: 0px;
+    left: 0px;
+  position: absolute;
+    
+}
+
 @keyframes blink {
     from {
         opacity: 1;
@@ -299,6 +321,7 @@ nav a:hover {
         color: #009900;
     }
 }
+
 
 
 
@@ -394,6 +417,7 @@ nav a:hover {
 
 
 
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
@@ -441,6 +465,7 @@ nav a:hover {
 .clearfix {
     *zoom: 1;
 }
+
 
 
 
