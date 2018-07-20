@@ -71,7 +71,7 @@ function init_input() {
         el: document.getElementById('block4'),
         charterPerSecond: 18,
         cursorSign: '',
-        word: ' Do you know the code? [yes/no]',
+        word: ' Do you know the code?',
 
         delay: 1,
 
@@ -95,9 +95,11 @@ function show_input() {
         event.preventDefault();
         if (event.keyCode === 13) {
         	value = input.value.toLowerCase().trim();
-        	if(value === "yes"){
+        	if(value === "bupa"){
         		// close_intro();
-                appendBannerHTML("masthead","./asset/banner/bupa_Bodymovin/index.html");
+                appendBannerHTML("masthead","./asset/banner/bupa_Bodymovin_mh/index.html");
+                appendBannerHTML("halfpage","./asset/banner/bupa_Bodymovin_hp/index.html");
+                content_block_opening();
         	}
         }
     });
@@ -129,12 +131,18 @@ function appendBannerHTML(size, path){
     var size = size;
     var path = path;
     const Item = ({ size,path }) =>
-`<div class="${size}"><object type="text/html" id="2" class="${size}_object" data="${path}"></object></div>`;
+`<div class="${size}"><object type="text/html" class="${size}_object" data="${path}"></object></div>`;
 
     $(".content_block").append([{
         size: size,
         path:path
     }].map(Item));
+}
+
+function content_block_opening(){
+    var tlMax = new TimelineMax();
+    tlMax
+    .to([".content_block"], 1, {opacity:1,scaleY:1, ease: Power3.easeInOut});
 }
 
 

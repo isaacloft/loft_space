@@ -272,26 +272,7 @@ nav a:hover {
 
 
 
-.content_block {
-    /*box-shadow: 1px 1px 2px 1px #9dd49d;*/
-}
 
-.masthead {
-    width: 970px;
-    height: 250px;
-    top: 100px;
-    position: relative;
-    right: 100px;
-}
-
-.masthead_object{
-     width: 970px;
-    height: 250px;
-    top: 0px;
-    left: 0px;
-  position: absolute;
-    
-}
 
 @keyframes blink {
     from {
@@ -322,9 +303,45 @@ nav a:hover {
     }
 }
 
+/*Banner content area*/
 
+.content_block {
+    /*box-shadow: 1px 1px 2px 1px #9dd49d;*/
+    transform: scaleY(0.001);
+    opacity: 0;
+}
 
+.masthead {
+    width: 970px;
+    height: 250px;
+    margin: 10px;
+    position: relative;
+}
 
+.masthead_object{
+     width: 970px;
+    height: 250px;
+    top: 0px;
+    left: 0px;
+  position: absolute;
+    
+}
+
+.halfpage {
+    width: 300px;
+    height: 600px;
+    margin: 10px;
+    position: relative;
+}
+
+.halfpage_object{
+     width: 300px;
+    height: 600px;
+    top: 0px;
+    left: 0px;
+  position: absolute;
+    
+}
 
 
 
