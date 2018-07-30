@@ -22,7 +22,7 @@ function init_typing() {
 
 }
 
-function init_typing() {
+function fallback_typing() {
 
     var easingPower4 = new gsapTypeIt({
         el: document.getElementById('block1'),
