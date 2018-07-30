@@ -14,26 +14,30 @@ window.mobileAndTabletcheck = function() {
   return check;
 };
 
+document.addEventListener("DOMContentLoaded", function(event) {
+  animate();
+   
+});
 // Check if the enabler has been initialised
-if (Enabler.isInitialized()) {
-  init();
-} else {
-  Enabler.addEventListener(studio.events.StudioEvent.INIT,init);
-}
+// if (Enabler.isInitialized()) {
+//   init();
+// } else {
+//   Enabler.addEventListener(studio.events.StudioEvent.INIT,init);
+// }
 
-// JS Polite load.
-function init() {
-  if (Enabler.isPageLoaded()) {
-    loadItem();
-  } else {
-    Enabler.addEventListener(studio.events.StudioEvent.PAGE_LOADED, loadItem);
-  }
-};
+// // JS Polite load.
+// function init() {
+//   if (Enabler.isPageLoaded()) {
+//     loadItem();
+//   } else {
+//     Enabler.addEventListener(studio.events.StudioEvent.PAGE_LOADED, loadItem);
+//   }
+// };
 
 
 // setting up init functions
 function loadItem() {
-	console.log('Enabler initialized');
+	// console.log('Enabler initialized');
   // definingClickthroughs();
   animate();
 }
