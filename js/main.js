@@ -22,6 +22,20 @@ function init_typing() {
 
 }
 
+function init_typing() {
+
+    var easingPower4 = new gsapTypeIt({
+        el: document.getElementById('block1'),
+        elClass: 'intro',
+        cursorSign: '_',
+        word: 'Hello, welcome to Loft..<br>A place for my code<br>Please turn off the adblocker before continuing browsing this site',
+        delay: 0,
+        duration: 2,
+        easing: Power1.easeIn
+    });
+
+}
+
 function init_rotating() {
     var last_cursor = $(".gsapCursor");
     last_cursor.remove();
@@ -113,6 +127,15 @@ function init_hovering() {
         return $('<span />', { text: v });
     });
     $cont.empty().append(parts);
+}
+
+function fallback_Animation(){
+     tlMax
+        .to(['#intro_block'], 0, { opacity: 1, onComplete: fallback_typing });
+        
+
+
+    ;
 }
 
 function intro_Animation() {

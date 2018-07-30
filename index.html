@@ -82,6 +82,8 @@
     if( window.canRunAds === undefined ){
         // adblocker detected, show fallback
         console.log("adblocker running");
+
+        fallback_Animation();
     }else{
         console.log(window.canRunAds);
 
