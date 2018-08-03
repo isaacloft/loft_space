@@ -15,9 +15,9 @@
     <link rel="icon" href="db.ico">
     <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/cmd.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
     <script src="js/adsbygoogle.js"></script>
-
     <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
 </head>
@@ -26,7 +26,6 @@
     <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-
     <div class="main-container">
         <div class="header-container">
             <header class="header">
@@ -35,13 +34,11 @@
                         <a href="index.html">
                          Loft 
                      </a>
-                     
                     </div>
                     <div class="right_side">
                         <a class="menu" href="https://isaacguan.com/owncloud" target="_blank">
                          [Cloud]
                      </a>
-
                         <a href="https://www.linkedin.com/in/isaacguanloft/" target="_blank">
                             <i class="fab fa-linkedin"></i>
                             
@@ -56,21 +53,25 @@
         </div>
         <div class="main">
             <div class="intro_block" id="intro_block">
-                <span class="directory">~/loft/home/</span>
-                <span id="block1"></span>
+                <div class="stream"></div>
+                <div class="line editline">
+                    <p class="time"></p>
+                    <p class="directory">~/loft/home/</p>
+                    <p contenteditable="true" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="information edit" id="edit"></p>
+                </div>
+                <!--  <span id="block1"></span>
                 <span id="block2"></span>
                 <span id="block3"></span>
                 <span id="block4"></span>
                 <span id="question" class="question" style="display: none;">&nbsp<input id="question_input" type="text" class="question_input" autofocus placeholder=""/>
-                </span>
+                </span> -->
             </div>
-            <div class="content_block">
-
-            </div>
+            <!--  <div class="content_block">
+            </div> -->
         </div>
     </div>
     <script>
-        window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')
+    window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')
     </script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.3/vivus.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
@@ -78,23 +79,27 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/plugins/TextPlugin.min.js"></script>
     <script src="js/custom_console.js"></script>
     <script src="js/gsapTypeIt.js"></script>
+    <script src="js/cmd.js"></script>
     <script src="js/main.js"></script>
     <script>
-        (function() {
+    (function() {
 
-    if( window.canRunAds === undefined ){
-        // adblocker detected, show fallback
-        console.log("adblocker running");
+        if (window.canRunAds === undefined) {
+            // adblocker detected, show fallback
+            console.log("adblocker running");
 
-        fallback_Animation();
-    }else{
-        console.log(window.canRunAds);
+            fallback_Animation();
+        } else {
+            console.log(window.canRunAds);
 
-        intro_Animation();
-    }
+            // intro_Animation();
+            window.onload = function() {
+                document.getElementById("edit").focus();
+            };
+        }
 
-})();
-</script>
+    })();
+    </script>
 </body>
 
 </html>

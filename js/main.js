@@ -14,9 +14,9 @@ function init_typing() {
         el: document.getElementById('block1'),
         elClass: 'intro',
         cursorSign: '_',
-        word: 'Hello, welcome to Loft..<br>A place for my code',
+        word: 'Hello,welcome to <a class="homepage" href="https://www.isaacguan.com" target="_blank">[Loft]</a>',
         delay: 0,
-        duration: 2,
+        duration: 1,
         easing: Power1.easeIn
     });
 
@@ -87,7 +87,7 @@ function init_input() {
         cursorSign: '',
         word: ' What\'s the code?',
 
-        delay: 1,
+        delay: .5,
 
     });
 

@@ -65,7 +65,7 @@ textarea {
 
 body {
     background-color: #17172d;
-    font: 30px Consolas, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New;
+    font: 25px Consolas, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New;
     /*overflow: hidden;*/
 }
 
@@ -193,13 +193,13 @@ nav a:hover {
    Author's custom styles
    ========================================================================== */
 .menu{
-    font-size:18px;
+    font-size:16px;
     text-shadow: none;
       padding: 10px;
     color: #009900;
 }
 
-.menu:hover{
+.homepage:hover, .menu:hover{
     color: #00cc00;
     text-shadow: 0 0 1px #00cc00, 0 0 3px #00cc00;
     
@@ -235,11 +235,12 @@ nav a:hover {
 .directory {
     background-color: #1666e5;
     color: #17172d;
+    margin-right: 5px;
 }
 
 
 .intro_block {
-    font: 30px Consolas, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New;
+    font: 25px Consolas, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New;
     font-weight: 100;
     color: #009900 !important;
     /*flex:3;*/
