@@ -23,7 +23,7 @@ $(document).ready(function(e) {
         ["index", "Welcome to Loft. All display banner portfolio will be coming soon"],
         ["about", "About Loft", "Personal website for Isaac Guan", "The command line sandbox is taken from <a class='homepage' href='https://codepen.io/z-/pen/eJNgWO' target='_blank'>[Koya.IO]</a>","Loft is modified based on that sandbox and added my own functionalities and color profile."],
         ["connect", "Connect with Loft",
-            "<a class='homepage' href='mailto:isaacloft0906@gmail.com'>Email Isaac</a>"
+            "<a class='homepage' href='mailto:isaacloft0906@gmail.com'>[Email Isaac]</a>"
         ]
         // "[skype:finn.shackleton](Skype)",
         // "[^http://steamcommunity.com/id/bananabutterscotchmaplepancakes](Steam) < Always available",
