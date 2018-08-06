@@ -1,10 +1,6 @@
 // JavaScript Document
 $(document).ready(function(e) {
-   /* Todo:
- • Merge this with Node.js, almost done
- • Webpages in a database/more editable version
- • Add cookies to track previous commands? (You can press up and down to browse previous commands this session)
-*/
+
    var faviconnumber = 1;
 	function favicon() {
 		favicon = favicon == 1 ? 2 : 1;
@@ -15,25 +11,25 @@ $(document).ready(function(e) {
       ["/help", "Show commands"],
       ["/list", "List all pages on the website"],
       ["/nav &lt;location&gt;", "Navigate to location"],
-	   ["/gl", "Generate a url for the current page - [^http://koya.io/](This doesn't work in an iframe, try it at *Koya.io*) outputs something like [^http://koya.io/connect](*koya.io/connect*)"],
-      ["/clear", "Clear the console"],
-      ["/login &lt;username&gt; &lt;password&gt;", "Login to your account - This is not set up and when implemeneted it'll be '/login username' then request password without printing into the cmd prompt"],
-      ["/upload", "Upload file, must be logged in."]
+	   // ["/gl", "Generate a url for the current page - [^http://koya.io/](This doesn't work in an iframe, try it at *Koya.io*) outputs something like [^http://koya.io/connect](*koya.io/connect*)"],
+      ["/clear", "Clear the console"]
+      // ["/login &lt;username&gt; &lt;password&gt;", "Login to your account - This is not set up and when implemeneted it'll be '/login username' then request password without printing into the cmd prompt"],
+      // ["/upload", "Upload file, must be logged in."]
    ];
    var previouscommands = [];
    var currentcommand = 0;
    var pages = [ /*Can be populated with various methods*/
-      ["index", "Welcome to Koya.io", "Simply, this is just a sandbox in which to add to; no real point - a couple of features that I plan to add though:", "URL shortner and open tracker, just enter a URL into the command line and press enter and you will get 2 links - 1 which looks like [http://koya.io/XXXXXX](http://koya.io/XXXXXX) and another [http://koya.io/u/XXXXXX](http://koya.io/u/XXXXXX) : they will both forward but the second will show a preview of the full url so they know where you are going.", "You can also save small messages with `/msg <string <160 chars>` and you will get a url like [http://koya.io/XXXXXX](http://koya.io/XXXXXX)","Pressing Ctrl+v will paste the short text or image and you will get a link.", "There will be accounts but likely given out rather than being able to register them whenever, this is a personal site so idk."],
+      ["index", "Welcome to Loft"],
       ["about", "About Koya.io", "Personal power website for Finn 'Koya' Shackleton.", "Will include some features which too are mainly for personal use: Link shortner, image host, pastebin and any sandbox testing", "The colours have been taken from [https://github.com/Poorchop/darktooth-theme-ports/tree/8c852e8edde8df57d831dc8631493b0565fadbbc/hexchat-darktooth](Poorchop's Darktooth HexChat theme)", "In the process of turning the website into a server sided thing, currently what you can read is in the [http://koya.io/scripts.js](JavaScript file)!"],
-	  ["connect", "Connect with Koya",
-	  "[mailto:_@koya.io](Email _@koya.io)",
-	  "[skype:finn.shackleton](Skype)",
-	  "[^http://steamcommunity.com/id/bananabutterscotchmaplepancakes](Steam) < Always available",
-	  "[^https://codepen.io/OfficialAntarctica](Codepen)",
-	  "[^http://everybodyedits.com/profiles/bbmp](Everybody Edits)"]
+	   ["connect", "Connect with Loft",
+	  "<a class='homepage' href='mailto:isaacloft0906@gmail.com'>Email Isaac</a>"]
+	  // "[skype:finn.shackleton](Skype)",
+	  // "[^http://steamcommunity.com/id/bananabutterscotchmaplepancakes](Steam) < Always available",
+	  // "[^https://codepen.io/OfficialAntarctica](Codepen)",
+	  // "[^http://everybodyedits.com/profiles/bbmp](Everybody Edits)"]
    ];
    var pageindex = ["index", "about", "connect"];
-   var currentpage = "landing";
+   var currentpage = "index";
    var url = "http://koya.io/"
       /*
          Custom Text Syntax
@@ -46,18 +42,18 @@ $(document).ready(function(e) {
             E! - Text is an error/notification
             A! - spaces are converted to non-breaking spaces (it's for ascii art - after all, this is a text based website)
       */
-   var directory = '<p class="directory">~/loft/home/</p>';
+   var directory = '<p id="pointer">~/loft/index/</p>';
    function init() {
       setInterval(time);
       console.clear();
       console.log(new Date().getTime());
                     
  
-      log(directory, 'Welcome to my <a class="homepage" href="https://www.isaacguan.com" target="_blank">[Loft]</a>');
-      log(directory, "This page is built to work like a command line tool.");
-      log(directory, "");
-	  urlvars();
-      log(directory, "For help say '/help'");
+      log(directory, 'Welcome to the <a class="homepage" href="https://www.isaacguan.com" target="_blank">[Loft]</a>');
+      log(directory, "This site is currently in-use for displaying my most recent work, advertising digital banners.");
+      log(directory, "You can type 'help' to view the basic commands navgating in this site");
+	  // urlvars();
+      // log(directory, "For help say '/help'");
 	  setInterval(favicon,500);
    }
 
@@ -241,7 +237,7 @@ $(document).ready(function(e) {
             text = "/" + text;
          }
          $(".editline .edit").text("");
-         log("User", text);
+         log(directory, text);
 
          previouscommands[currentcommand] = text;
          currentcommand = previouscommands.length;
@@ -274,7 +270,7 @@ $(document).ready(function(e) {
             for (var i = 0; i < commandlist.length; i++) {
                output = commandlist[i][0] + " : " + commandlist[i][1];
                //console.log(command[i][0]);
-               log("Client", output);
+               log(directory, output);
             }
             break;
 		 case "/gl":
@@ -290,7 +286,7 @@ $(document).ready(function(e) {
                log(directory, "You are now in " + currentpage);
                loadpage($.inArray(word[1], pageindex));
             } else {
-               log("Client", "'" + word[1] + "' does not exist.");
+               log("", "'" + word[1] + "' does not exist.");
             }
             break;
          case "/list":

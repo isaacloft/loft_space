@@ -6,6 +6,7 @@
      margin: 0 4px;
      padding-top: 2px;
      width: calc(100% - 12px);
+     line-height: 30px;
      p {
          display: inline-block;
          margin: 0;
@@ -29,7 +30,7 @@
  }
 
  .edit {
-     min-width: calc(100% - 200px);
+     /*min-width: calc(100% - 200px);*/
      outline: none;
  }
 
@@ -37,3 +38,9 @@
      user-select: none;
      cursor: default;
  }
+
+/* .information:hover{
+    color: #00cc00;
+    text-shadow: 0 0 1px #00cc00, 0 0 3px #00cc00;
+}*/
+ 

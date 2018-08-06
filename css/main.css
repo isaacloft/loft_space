@@ -9,6 +9,9 @@ html {
 
 
 
+
+
+
 /*::-moz-selection {
     background: #b3d4fc;
     text-shadow: none;
@@ -59,6 +62,9 @@ textarea {
 
 
 
+
+
+
 /* ===== Initializr Styles ==================================================
    Author: Jonathan Verrecchia - verekia.com/initializr/responsive-template
    ========================================================================== */
@@ -73,6 +79,9 @@ body {
     width: 90%;
     margin: 0 5%;
 }
+
+
+
 
 
 
@@ -117,6 +126,9 @@ a {
 
 
 
+
+
+
 /* ==============
     MOBILE: Menu
     ============== */
@@ -152,6 +164,9 @@ nav a:hover {
 
 
 
+
+
+
 /* ==============
     MOBILE: Main
     ============== */
@@ -178,6 +193,9 @@ nav a:hover {
 
 
 
+
+
+
 /* ===============
     ALL: IE Fixes
     =============== */
@@ -189,21 +207,26 @@ nav a:hover {
 
 
 
+
+
+
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-.menu{
-    font-size:16px;
+
+.menu {
+    font-size: 16px;
     text-shadow: none;
-      padding: 10px;
+    padding: 10px;
     color: #009900;
 }
 
-.homepage:hover, .menu:hover{
+.homepage:hover,
+.menu:hover {
     color: #00cc00;
     text-shadow: 0 0 1px #00cc00, 0 0 3px #00cc00;
-    
 }
+
 .main-container {
     display: flex;
     flex-direction: column;
@@ -236,7 +259,64 @@ nav a:hover {
     background-color: #1666e5;
     color: #17172d;
     margin-right: 5px;
+    padding: 3px;
+
+    -webkit-border-top-right-radius: 30px;
+    -webkit-border-bottom-right-radius: 30px;
+    -moz-border-radius-topright: 30px;
+    -moz-border-radius-bottomright: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
 }
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+
+    border-left: 10px solid green;
+}
+
+#pointer {
+    width: 200px;
+    height: 30px;
+    position: relative;
+    background: #1666e5;
+    color: #17172d;
+    /*padding-top: 8px;*/
+    padding-left: 5px;
+    margin-right: 25px;
+}
+
+#pointer:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-left: 15px solid #17172d;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+}
+
+#pointer:before {
+    content: "";
+    position: absolute;
+    right: -15px;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-left: 15px solid #1666e5;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+}
+
+#edit{
+    line-height: 30px;
+}
+
 
 
 .intro_block {
@@ -247,7 +327,7 @@ nav a:hover {
 }
 
 .content_block {
-   /* width: 50vw;
+    /* width: 50vw;
     height: 70vh;*/
 }
 
@@ -318,6 +398,9 @@ nav a:hover {
     }
 }
 
+
+
+
 /*Banner content area*/
 
 .content_block {
@@ -333,13 +416,12 @@ nav a:hover {
     position: relative;
 }
 
-.masthead_object{
-     width: 970px;
+.masthead_object {
+    width: 970px;
     height: 250px;
     top: 0px;
     left: 0px;
-  position: absolute;
-    
+    position: absolute;
 }
 
 .halfpage {
@@ -349,14 +431,16 @@ nav a:hover {
     position: relative;
 }
 
-.halfpage_object{
-     width: 300px;
+.halfpage_object {
+    width: 300px;
     height: 600px;
     top: 0px;
     left: 0px;
-  position: absolute;
-    
+    position: absolute;
 }
+
+
+
 
 
 
@@ -450,6 +534,9 @@ nav a:hover {
 
 
 
+
+
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
@@ -497,6 +584,9 @@ nav a:hover {
 .clearfix {
     *zoom: 1;
 }
+
+
+
 
 
 
