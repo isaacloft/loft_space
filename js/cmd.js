@@ -21,7 +21,7 @@ $(document).ready(function(e) {
     var currentcommand = 0;
     var pages = [ /*Can be populated with various methods*/
         ["index", "Welcome to Loft"],
-        ["about", "About Koya.io", "Personal power website for Finn 'Koya' Shackleton.", "Will include some features which too are mainly for personal use: Link shortner, image host, pastebin and any sandbox testing", "The colours have been taken from [https://github.com/Poorchop/darktooth-theme-ports/tree/8c852e8edde8df57d831dc8631493b0565fadbbc/hexchat-darktooth](Poorchop's Darktooth HexChat theme)", "In the process of turning the website into a server sided thing, currently what you can read is in the [http://koya.io/scripts.js](JavaScript file)!"],
+        ["about", "About Loft", "Personal website for Isaac Guan", "The command line sandbox is taken from <a class='homepage' href='https://codepen.io/z-/pen/eJNgWO' target='_blank'>[Koya.IO]</a>","Loft is modified based on that sandbox and added my own functionalities and color profile."],
         ["connect", "Connect with Loft",
             "<a class='homepage' href='mailto:isaacloft0906@gmail.com'>Email Isaac</a>"
         ]
@@ -354,7 +354,7 @@ $(document).ready(function(e) {
     function loadpage(i, directory) {
 
         log_divider(pages[i][0]);
-      
+
         $.each(pages[i], function(id, content) {
             if (content != pageindex[i]) {
                 log(directory, content);
@@ -362,7 +362,7 @@ $(document).ready(function(e) {
             }
         });
         log_divider(pages[i][0]);
-        
+
 
 
     }
