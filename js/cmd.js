@@ -20,7 +20,7 @@ $(document).ready(function(e) {
     var previouscommands = [];
     var currentcommand = 0;
     var pages = [ /*Can be populated with various methods*/
-        ["index", "Welcome to Loft"],
+        ["index", "Welcome to Loft. All display banner portfolio will be coming soon"],
         ["about", "About Loft", "Personal website for Isaac Guan", "The command line sandbox is taken from <a class='homepage' href='https://codepen.io/z-/pen/eJNgWO' target='_blank'>[Koya.IO]</a>","Loft is modified based on that sandbox and added my own functionalities and color profile."],
         ["connect", "Connect with Loft",
             "<a class='homepage' href='mailto:isaacloft0906@gmail.com'>Email Isaac</a>"
@@ -54,7 +54,7 @@ $(document).ready(function(e) {
         console.log(new Date().getTime());
 
 
-        log(index_directory, 'Welcome to the <a class="homepage" href="https://www.isaacguan.com" target="_blank">[Loft]</a>');
+        log(index_directory, 'Welcome to the <a class="homepage" href="https://www.isaacguan.com" target="_blank">[Loft]</a>. All display banner portfolio will be coming soon');
         log(index_directory, "This site is currently in-use for displaying my most recent work, advertising digital banners.");
         log(index_directory, "You can type 'help' to view the basic commands navgating in this site");
         // urlvars();
@@ -330,7 +330,7 @@ $(document).ready(function(e) {
                 break;
             case "list":
                 $.each(pageindex, function(id, content) {
-                    log("Client", "> " + content);
+                    log(index_directory, "> " + content);
                 });
                 break;
             case "/login":
@@ -345,7 +345,7 @@ $(document).ready(function(e) {
                 break;
             default:
                 output = "Unrecognised command '" + word[0] + "'.";
-                log("Client", output);
+                log(index_directory, output);
         }
     }
 
