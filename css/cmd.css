@@ -32,6 +32,7 @@
  .edit {
      /*min-width: calc(100% - 200px);*/
      outline: none;
+     display: inline;
  }
 
  .time {

@@ -56,8 +56,10 @@
                 <div class="stream"></div>
                 <div class="line editline">
                     <p class="time"></p>
-                    <p class="pointer" id="pointer">~/loft/index/</p>
-                    <p contenteditable="true" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="information edit" id="edit"></p>
+                    <p class="pointer" id="pointer"> ~/loft/index/</p>
+                    <!-- <span contenteditable="true" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="information edit" id="edit" style="display: inline;"></span> -->
+                  <input id="edit" type="text" class="edit information" autofocus placeholder=""/>
+                   
                 </div>
                 <!--  <span id="block1"></span>
                 <span id="block2"></span>
@@ -73,6 +75,10 @@
     <script>
     window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')
     </script>
+    <!--     <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script> -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.3/vivus.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/plugins/CSSPlugin.min.js"></script>

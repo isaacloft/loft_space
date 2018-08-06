@@ -12,6 +12,7 @@ html {
 
 
 
+
 /*::-moz-selection {
     background: #b3d4fc;
     text-shadow: none;
@@ -25,6 +26,7 @@ html {
 
 hr {
     display: block;
+    width:230px !important;
     height: 1px;
     border: 0;
     border-top: 1px solid #ccc;
@@ -65,6 +67,7 @@ textarea {
 
 
 
+
 /* ===== Initializr Styles ==================================================
    Author: Jonathan Verrecchia - verekia.com/initializr/responsive-template
    ========================================================================== */
@@ -79,6 +82,7 @@ body {
     width: 90%;
     margin: 0 5%;
 }
+
 
 
 
@@ -129,6 +133,7 @@ a {
 
 
 
+
 /* ==============
     MOBILE: Menu
     ============== */
@@ -167,6 +172,7 @@ nav a:hover {
 
 
 
+
 /* ==============
     MOBILE: Main
     ============== */
@@ -196,6 +202,7 @@ nav a:hover {
 
 
 
+
 /* ===============
     ALL: IE Fixes
     =============== */
@@ -203,6 +210,7 @@ nav a:hover {
 .ie7 .title {
     padding-top: 20px;
 }
+
 
 
 
@@ -285,7 +293,7 @@ nav a:hover {
     background: #1666e5;
     color: #17172d;
     /*padding-top: 8px;*/
-    padding-left: 5px;
+    padding-left: 15px;
     margin-right: 25px;
 }
 
@@ -313,7 +321,24 @@ nav a:hover {
     border-bottom: 15px solid transparent;
 }
 
-#edit{
+.about_directory {
+    background: #f4cb42 !important;
+    color: #17172d;
+}
+.about_directory:before{
+   border-left: 15px solid #f4cb42 !important;
+}
+
+.connect_directory {
+    background: #9ed17d !important;
+    color: #17172d;
+    width:230px !important;
+}
+.connect_directory:before{
+   border-left: 15px solid #9ed17d !important;
+}
+
+#edit {
     line-height: 30px;
 }
 
@@ -333,7 +358,7 @@ nav a:hover {
 
 
 
-.question_input {
+.edit {
     background-color: #17172d;
     border: none;
     cursor: blink
@@ -357,7 +382,7 @@ nav a:hover {
     opacity: 1;
 }
 
-.question_input:focus {
+.edit:focus {
     outline: none;
 }
 
@@ -401,6 +426,7 @@ nav a:hover {
 
 
 
+
 /*Banner content area*/
 
 .content_block {
@@ -438,6 +464,7 @@ nav a:hover {
     left: 0px;
     position: absolute;
 }
+
 
 
 
@@ -537,6 +564,7 @@ nav a:hover {
 
 
 
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
@@ -584,6 +612,7 @@ nav a:hover {
 .clearfix {
     *zoom: 1;
 }
+
 
 
 
