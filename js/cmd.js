@@ -32,7 +32,7 @@ $(document).ready(function(e) {
     ];
     var pageindex = ["index", "about", "connect"];
     var currentpage = "index";
-    var url = "http://koya.io/"
+    // var url = "http://koya.io/"
     /*
        Custom Text Syntax
        Links:      
@@ -97,6 +97,33 @@ $(document).ready(function(e) {
         } else {
             return results[1];
         }
+    }
+
+    function log_divider(directory) {
+      console.log("!!!",directory);
+        var theme_color = "";
+        if (directory == "index") {
+            theme_color = '#1666e5';
+        }else if (directory == "about"){
+            theme_color = '#f4cb42';
+
+        }else if (directory == "connect"){
+            theme_color = '#9ed17d';
+
+        }
+        var d = new Date();
+        var hours = ((d.getHours() < 10) ? "0" : "") + d.getHours();
+        var minutes = ((d.getMinutes() < 10) ? "0" : "") + d.getMinutes();
+        var seconds = ((d.getSeconds() < 10) ? "0" : "") + d.getSeconds();
+        var colour = "whitet";
+        var textcolour = "";
+        var postcolour = "";
+
+        $(".stream").append(
+
+            '<div style="color:'+ theme_color +'" class="la-pacman la-sm"><div></div><div></div><div></div><div></div><div></div><div></div></div>'
+        );
+
     }
 
     function log(name, information) {
@@ -292,7 +319,7 @@ $(document).ready(function(e) {
                     currentpage = word[1];
 
                     var dir_class = currentpage + "_directory"
-                    var current_directory = '<p id="pointer" class="'+ dir_class +'">~/loft/'+ currentpage + '/</p>';
+                    var current_directory = '<p id="pointer" class="' + dir_class + '">~/loft/' + currentpage + '/</p>';
 
                     log(current_directory, "You are now in " + currentpage);
 
@@ -322,13 +349,22 @@ $(document).ready(function(e) {
         }
     }
 
+
+
     function loadpage(i, directory) {
+
+        log_divider(pages[i][0]);
+      
         $.each(pages[i], function(id, content) {
             if (content != pageindex[i]) {
                 log(directory, content);
                 console.log(content);
             }
         });
+        log_divider(pages[i][0]);
+        
+
+
     }
     var loginreturn = false;
 
