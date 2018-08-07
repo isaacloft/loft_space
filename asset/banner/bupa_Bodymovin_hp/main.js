@@ -43,15 +43,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 //   animate();
 // }
 
-// definng clickthroughs
-function definingClickthroughs () {
-  addEvent("click", stage, onExit);
-}
 
-// add in same logic for polite load (test for isLoaded, if not, listen for polite load event)
-function onExit(e) {
-	Enabler.exit("*** BANNER CLICKTHROUGH ***");
-}
 
 
 

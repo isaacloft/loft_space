@@ -264,6 +264,12 @@ nav a:hover {
     color: #009900;
 }
 
+.ascii{
+    white-space: pre;
+    color:#009900;
+
+}
+
 .homepage:hover,
 .menu:hover {
     color: #00cc00;
@@ -422,8 +428,10 @@ nav a:hover {
 }
 
 
-
-
+/*.stream{
+    white-space: pre;
+}
+*/
 .edit {
     background-color: #17172d;
     border: none;

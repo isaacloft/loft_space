@@ -50,7 +50,7 @@ $(document).ready(function(e) {
 
     function init() {
         setInterval(time);
-        console.clear();
+        // console.clear();
         console.log(new Date().getTime());
 
 
