@@ -1,13 +1,15 @@
 var tlMax = new TimelineMax();
 
 // Type animation with GSAP
-
+appendBannerHTML("masthead", "./asset/banner/bupa_Bodymovin_mh/index.html");
+appendBannerHTML("halfpage", "./asset/banner/bupa_Bodymovin_hp/index.html");
 
 // intro_Animation();
 
-function insert_directory(id){
-    $("<br><span class='directory shadow'>~/loft/home/</span>").insertBefore("#"+id);
+function insert_directory(id) {
+    $("<br><span class='directory shadow'>~/loft/home/</span>").insertBefore("#" + id);
 }
+
 function init_typing() {
 
     var easingPower4 = new gsapTypeIt({
@@ -93,10 +95,10 @@ function init_input() {
 
 }
 
-function close_intro(){
-var tlMax = new TimelineMax();
+function close_intro() {
+    var tlMax = new TimelineMax();
     tlMax
-	.to(['#intro_block'], 1, {height:0});
+        .to(['#intro_block'], 1, { height: 0 });
 }
 
 function show_input() {
@@ -108,13 +110,13 @@ function show_input() {
     input.addEventListener("keyup", function(event) {
         event.preventDefault();
         if (event.keyCode === 13) {
-        	value = input.value.toLowerCase().trim();
-        	if(value === "bupa"){
-        		// close_intro();
-                appendBannerHTML("masthead","./asset/banner/bupa_Bodymovin_mh/index.html");
-                appendBannerHTML("halfpage","./asset/banner/bupa_Bodymovin_hp/index.html");
+            value = input.value.toLowerCase().trim();
+            if (value === "bupa") {
+                // close_intro();
+                appendBannerHTML("masthead", "./asset/banner/bupa_Bodymovin_mh/index.html");
+                appendBannerHTML("halfpage", "./asset/banner/bupa_Bodymovin_hp/index.html");
                 content_block_opening();
-        	}
+            }
         }
     });
 }
@@ -129,10 +131,10 @@ function init_hovering() {
     $cont.empty().append(parts);
 }
 
-function fallback_Animation(){
-     tlMax
+function fallback_Animation() {
+    tlMax
         .to(['#intro_block'], 0, { opacity: 1, onComplete: fallback_typing });
-        
+
 
 
     ;
@@ -150,22 +152,22 @@ function intro_Animation() {
 
 }
 // ./asset/banner/bupa_Bodymovin/index.html
-function appendBannerHTML(size, path){
+function appendBannerHTML(size, path) {
     var size = size;
     var path = path;
-    const Item = ({ size,path }) =>
-`<div class="${size}"><object type="text/html" class="${size}_object" data="${path}"></object></div>`;
+    const Item = ({ size, path }) =>
+        `<div class="${size}"><object type="text/html" class="${size}_object" data="${path}"></object></div>`;
 
     $(".content_block").append([{
         size: size,
-        path:path
+        path: path
     }].map(Item));
 }
 
-function content_block_opening(){
+function content_block_opening() {
     var tlMax = new TimelineMax();
     tlMax
-    .to([".content_block"], 1, {opacity:1,scaleY:1, ease: Power3.easeInOut});
+        .to([".content_block"], 1, { opacity: 1, scaleY: 1, ease: Power3.easeInOut });
 }
 
 

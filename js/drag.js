@@ -1,11 +1,11 @@
-var handler = document.querySelector('.handler');
-var wrapper = handler.closest('.main');
+var handlerX = document.querySelector('.handler');
+var wrapper = handlerX.closest('.main');
 var boxA = wrapper.querySelector('.code_block');
 var isHandlerDragging = false;
 
 document.addEventListener('mousedown', function(e) {
   // If mousedown event is fired from .handler, toggle flag to true
-  if (e.target === handler) {
+  if (e.target === handlerX) {
     isHandlerDragging = true;
   }
 });

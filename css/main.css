@@ -383,30 +383,42 @@ nav a:hover {
     color: #009900 !important;
     overflow: hidden;
     flex: 1 1 auto;
+     padding: 5px;
+     border-radius: 5px;
+
     /*flex:3;*/
 }
 
 .content_block {
 
      flex: 1 1 auto;
+     background-color: #20262E;;
+     padding: 5px;
+     border-radius: 5px;
+    overflow: hidden;
+
     /* width: 50vw;
     height: 70vh;*/
 }
 
 .handler {
-  width: 20px;
+  width: 8px;
   padding: 0;
+  margin: 1px;
   cursor: ew-resize;
   flex: 0 0 auto;
+  background: #2d333b;
+  
 }
 
-.handler::before {
+.handler::after {
   content: '';
   display: block;
-  width: 4px;
+  width: 8px;
+  left: 3px;
   height: 100%;
-  background: red;
   margin: 0 auto;
+  z-index: 10;
 }
 
 
@@ -502,11 +514,11 @@ nav a:hover {
 
 /*Banner content area*/
 
-.content_block {
-    /*box-shadow: 1px 1px 2px 1px #9dd49d;*/
+/*.content_block {
+    box-shadow: 1px 1px 2px 1px #9dd49d;
     transform: scaleY(0.001);
     opacity: 0;
-}
+}*/
 
 .masthead {
     width: 970px;
