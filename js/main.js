@@ -1,8 +1,10 @@
 var tlMax = new TimelineMax();
 
 // Type animation with GSAP
-appendBannerHTML("masthead", "./asset/banner/bupa_Bodymovin_mh/index.html");
-appendBannerHTML("halfpage", "./asset/banner/bupa_Bodymovin_hp/index.html");
+// appendBannerHTML("masthead", "./asset/banner/bupa_Bodymovin_mh/index.html");
+// appendBannerHTML("halfpage", "./asset/banner/bupa_Bodymovin_hp/index.html");
+
+ $("#frame").attr("src", "http://ajf.resource-server.com/ajf0702_ajf_website/WP/");
 
 // intro_Animation();
 
