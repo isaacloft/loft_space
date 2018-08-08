@@ -133,9 +133,9 @@ function show_animated_banners(client) {
 
     if (client == "bupa") {
         appendBannerHTML("masthead", "./asset/banner/bupa_Bodymovin_mh/index.html");
+        appendBannerHTML("masthead", "./asset/banner/bupa_Bodymovin_mh2/index.html");
         appendBannerHTML("halfpage", "./asset/banner/bupa_Bodymovin_hp/index.html");
         appendBannerHTML("halfpage", "./asset/banner/bupa_Bodymovin_hp2/index.html");
-        appendBannerHTML("masthead", "./asset/banner/bupa_Bodymovin_mh2/index.html");
         appendBannerHTML("mrec", "./asset/banner/bupa_CC_mrec/index.html");
 
 

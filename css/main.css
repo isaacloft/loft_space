@@ -19,6 +19,7 @@ html {
 
 
 
+
 /*::-moz-selection {
     background: #b3d4fc;
     text-shadow: none;
@@ -80,6 +81,7 @@ textarea {
 
 
 
+
 /* ===== Initializr Styles ==================================================
    Author: Jonathan Verrecchia - verekia.com/initializr/responsive-template
    ========================================================================== */
@@ -94,6 +96,7 @@ body {
     width: 90%;
     margin: 0 5%;
 }
+
 
 
 
@@ -158,6 +161,7 @@ a {
 
 
 
+
 /* ==============
     MOBILE: Menu
     ============== */
@@ -189,6 +193,7 @@ nav a:visited {
 nav a:hover {
     text-decoration: underline;
 }
+
 
 
 
@@ -239,6 +244,7 @@ nav a:hover {
 
 
 
+
 /* ===============
     ALL: IE Fixes
     =============== */
@@ -246,6 +252,7 @@ nav a:hover {
 .ie7 .title {
     padding-top: 20px;
 }
+
 
 
 
@@ -277,6 +284,51 @@ nav a:hover {
     -webkit-user-select: none;
     -moz-user-select: none;
     user-select: none;
+}
+
+.typewriter p {
+    /*font-size: 20px;*/
+
+    color: #009900;
+    white-space: pre;
+    /*font-family: monospace;*/
+    overflow: hidden;
+    /* Ensures the content is not revealed until the animation */
+    /*border-right: .15em solid orange;*/
+    /* The typwriter cursor */
+    /*white-space: nowrap;*/
+    /* Keeps the content on a single line */
+    margin: 0 auto;
+    /* Gives that scrolling effect as the typing happens */
+    /*letter-spacing: .15em;*/
+    /* Adjust as needed */
+    animation: typing 6s steps(20, end),
+    blink-caret 0s step-end infinite;
+}
+
+
+/* The typing effect */
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+    to {
+        width: 100%
+    }
+}
+
+
+/* The typewriter cursor effect */
+
+@keyframes blink-caret {
+    from,
+    to {
+        border-color: transparent
+    }
+    50% {
+        border-color: orange
+    }
 }
 
 .homepage:hover,
@@ -527,6 +579,7 @@ nav a:hover {
 
 
 
+
 /*Banner content area*/
 
 
@@ -536,7 +589,7 @@ nav a:hover {
     opacity: 0;
 }*/
 
-.banners{
+.banners {
     position: relative;
     /*display: inline-block;*/
 }
@@ -586,6 +639,7 @@ nav a:hover {
     left: 0px;
     position: absolute;
 }
+
 
 
 
@@ -700,6 +754,7 @@ nav a:hover {
 
 
 
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
@@ -747,6 +802,7 @@ nav a:hover {
 .clearfix {
     *zoom: 1;
 }
+
 
 
 
