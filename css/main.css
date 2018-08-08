@@ -18,6 +18,7 @@ html {
 
 
 
+
 /*::-moz-selection {
     background: #b3d4fc;
     text-shadow: none;
@@ -78,6 +79,7 @@ textarea {
 
 
 
+
 /* ===== Initializr Styles ==================================================
    Author: Jonathan Verrecchia - verekia.com/initializr/responsive-template
    ========================================================================== */
@@ -92,6 +94,7 @@ body {
     width: 90%;
     margin: 0 5%;
 }
+
 
 
 
@@ -154,6 +157,7 @@ a {
 
 
 
+
 /* ==============
     MOBILE: Menu
     ============== */
@@ -185,6 +189,7 @@ nav a:visited {
 nav a:hover {
     text-decoration: underline;
 }
+
 
 
 
@@ -233,6 +238,7 @@ nav a:hover {
 
 
 
+
 /* ===============
     ALL: IE Fixes
     =============== */
@@ -240,6 +246,7 @@ nav a:hover {
 .ie7 .title {
     padding-top: 20px;
 }
+
 
 
 
@@ -264,10 +271,12 @@ nav a:hover {
     color: #009900;
 }
 
-.ascii{
+.ascii {
     white-space: pre;
-    color:#009900;
-
+    color: #009900;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
 }
 
 .homepage:hover,
@@ -389,18 +398,19 @@ nav a:hover {
     color: #009900 !important;
     overflow: hidden;
     flex: 1 1 auto;
-     padding: 5px;
-     border-radius: 5px;
+    padding: 5px;
+    border-radius: 5px;
 
     /*flex:3;*/
 }
 
 .content_block {
 
-     flex: 1 1 auto;
-     background-color: #20262E;;
-     padding: 5px;
-     border-radius: 5px;
+    flex: 1 1 auto;
+    background-color: #20262E;
+    ;
+    padding: 5px;
+    border-radius: 5px;
     overflow: hidden;
 
     /* width: 50vw;
@@ -408,30 +418,26 @@ nav a:hover {
 }
 
 .handler {
-  width: 8px;
-  padding: 0;
-  margin: 1px;
-  cursor: ew-resize;
-  flex: 0 0 auto;
-  background: #2d333b;
-  
+    width: 8px;
+    padding: 0;
+    margin: 1px;
+    cursor: ew-resize;
+    flex: 0 0 auto;
+    background: #2d333b;
 }
 
 .handler::after {
-  content: '';
-  display: block;
-  width: 8px;
-  left: 3px;
-  height: 100%;
-  margin: 0 auto;
-  z-index: 10;
+    content: '';
+    display: block;
+    width: 8px;
+    left: 3px;
+    height: 100%;
+    margin: 0 auto;
+    z-index: 10;
 }
 
 
-/*.stream{
-    white-space: pre;
-}
-*/
+
 .edit {
     background-color: #17172d;
     border: none;
@@ -520,13 +526,20 @@ nav a:hover {
 
 
 
+
 /*Banner content area*/
+
 
 /*.content_block {
     box-shadow: 1px 1px 2px 1px #9dd49d;
     transform: scaleY(0.001);
     opacity: 0;
 }*/
+
+.banners{
+    position: relative;
+    /*display: inline-block;*/
+}
 
 .masthead {
     width: 970px;
@@ -557,6 +570,24 @@ nav a:hover {
     left: 0px;
     position: absolute;
 }
+
+.mrec {
+    width: 300px;
+    height: 250px;
+    margin: 10px;
+    position: relative;
+}
+
+.mrec_object {
+    width: 300px;
+    height: 250px;
+
+    top: 0px;
+    left: 0px;
+    position: absolute;
+}
+
+
 
 
 
@@ -668,6 +699,7 @@ nav a:hover {
 
 
 
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
@@ -715,6 +747,7 @@ nav a:hover {
 .clearfix {
     *zoom: 1;
 }
+
 
 
 

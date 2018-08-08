@@ -12,6 +12,7 @@ $(document).ready(function(e) {
         ["help", "Show commands"],
         ["list", "List all pages on the website"],
         ["nav &lt;location&gt;", "Navigate to location, i.e. nav about"],
+        ["show &lt;animated banners by clients&gt;", "Currently available clients: bupa, holden."], 
         // ["/gl", "Generate a url for the current page - [^http://koya.io/](This doesn't work in an iframe, try it at *Koya.io*) outputs something like [^http://koya.io/connect](*koya.io/connect*)"],
         ["clear", "Clear the console"]
         // ["/login &lt;username&gt; &lt;password&gt;", "Login to your account - This is not set up and when implemeneted it'll be '/login username' then request password without printing into the cmd prompt"],
@@ -20,8 +21,23 @@ $(document).ready(function(e) {
     var previouscommands = [];
     var currentcommand = 0;
     var pages = [ /*Can be populated with various methods*/
-        ["index", "Welcome to Loft. All display banner portfolio will be coming soon"],
-        ["about", "About Loft", "Personal website for Isaac Guan", "The command line sandbox is taken from <a class='homepage' href='https://codepen.io/z-/pen/eJNgWO' target='_blank'>[Koya.IO]</a>","Loft is modified based on that sandbox and added my own functionalities and color profile."],
+        ["index", "Welcome to Loft.", 
+        "<div class='ascii'>   | |       / __ \   |  ____| |__   __|</div>",
+        "<div class='ascii'>   | |      | |  | |  | |__      | |   </div>",
+        "<div class='ascii'>   | |      | |  | |  |  __|     | |   </div>",
+        "<div class='ascii'>   | |____  | |__| |  | |        | |   </div>",
+        "<div class='ascii'>   |______|  \____/    |_|        |_|   </div>"],
+
+
+        ["about", "About Loft",
+        "I'm big fan of command line because of my earlier networking engineering experience.",
+        "The current Loft is still in starting phase to be a real command line operated website",
+        "I will continue updating new features, such as linux directory structure.",
+        "-----------------------------------------",
+
+
+
+        "The command line sandbox is taken from <a class='homepage' href='https://codepen.io/z-/pen/eJNgWO' target='_blank'>[Koya.IO]</a>","Loft is modified based on that sandbox and added my own functionalities and color profile."],
         ["connect", "Connect with Loft",
             "<a class='homepage' href='mailto:isaacloft0906@gmail.com'>[Email Isaac]</a>"
         ]
@@ -30,7 +46,9 @@ $(document).ready(function(e) {
         // "[^https://codepen.io/OfficialAntarctica](Codepen)",
         // "[^http://everybodyedits.com/profiles/bbmp](Everybody Edits)"]
     ];
-    var pageindex = ["index", "about", "connect"];
+    var pageindex = ["index", "about", "connect",""];
+    var clientindex = ["bupa", "holden"];
+
     var currentpage = "index";
     // var url = "http://koya.io/"
     /*
@@ -326,6 +344,22 @@ $(document).ready(function(e) {
                     loadpage($.inArray(word[1], pageindex), current_directory);
                 } else {
                     log("", "'" + word[1] + "' does not exist.");
+                }
+                break;
+            case "show":
+                if ($.inArray(word[1], clientindex) >= 0) {
+                    currentpage = word[1];
+
+                    var dir_class = currentpage + "_directory"
+                    var current_directory = '<p id="pointer" class="' + dir_class + '">~/loft/' + currentpage + '/</p>';
+
+                    log(current_directory, "You are watching animated banners for " + currentpage, "You can drag the edge of the right canvas to resize");
+                    log(current_directory, "Note: <u>You can drag the edge of the right canvas to resize<u>");
+                    show_animated_banners(currentpage);
+
+                    // loadpage($.inArray(word[1], clientindex), current_directory);
+                } else {
+                    log("", "'" + word[1] + "' has no animated banners to display");
                 }
                 break;
             case "list":
