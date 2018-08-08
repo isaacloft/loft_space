@@ -107,7 +107,7 @@ function rm_bodymovin(){
 
 function checkRestart(){
 
-  if(counter<1){
+  if(counter>-1){
     rm_bodymovin();
     counter++;
     tl.restart();

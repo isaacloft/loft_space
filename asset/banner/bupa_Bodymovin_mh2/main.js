@@ -14,29 +14,29 @@ window.mobileAndTabletcheck = function() {
 };
 
 // Check if the enabler has been initialised
-if (Enabler.isInitialized()) {
-  init();
-} else {
-  Enabler.addEventListener(studio.events.StudioEvent.INIT,init);
-}
+// if (Enabler.isInitialized()) {
+//   init();
+// } else {
+//   Enabler.addEventListener(studio.events.StudioEvent.INIT,init);
+// }
 
-// JS Polite load.
-function init() {
-  if (Enabler.isPageLoaded()) {
-    loadItem();
-  } else {
-    Enabler.addEventListener(studio.events.StudioEvent.PAGE_LOADED, loadItem);
-  }
-};
+// // JS Polite load.
+// function init() {
+//   if (Enabler.isPageLoaded()) {
+//     loadItem();
+//   } else {
+//     Enabler.addEventListener(studio.events.StudioEvent.PAGE_LOADED, loadItem);
+//   }
+// };
 
 
-// setting up init functions
-function loadItem() {
-	console.log('Enabler initialized');
-  definingClickthroughs();
-  animate();
-}
-
+// // setting up init functions
+// function loadItem() {
+// 	console.log('Enabler initialized');
+//   definingClickthroughs();
+//   animate();
+// }
+animate();
 // definng clickthroughs
 function definingClickthroughs () {
   addEvent("click", stage, onExit);
@@ -101,7 +101,7 @@ function rm_bodymovin(){
 function checkRestart(){
 
 
-  if(counter<1){
+  if(counter>-1){
     counter++;
 
     tl

@@ -10,7 +10,7 @@
   background: white;
   text-align: left;
   overflow: hidden;
-  cursor: pointer;
+  /*cursor: pointer;*/
   letter-spacing: -.3px;
 
   -webkit-font-smoothing: antialiased;

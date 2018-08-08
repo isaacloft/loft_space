@@ -18,28 +18,29 @@ window.mobileAndTabletcheck = function() {
 };
 
 // Check if the enabler has been initialised
-if (Enabler.isInitialized()) {
-  init();
-} else {
-  Enabler.addEventListener(studio.events.StudioEvent.INIT,init);
-}
+// if (Enabler.isInitialized()) {
+//   init();
+// } else {
+//   Enabler.addEventListener(studio.events.StudioEvent.INIT,init);
+// }
 
 // JS Polite load.
-function init() {
-  if (Enabler.isPageLoaded()) {
-    loadItem();
-  } else {
-    Enabler.addEventListener(studio.events.StudioEvent.PAGE_LOADED, loadItem);
-  }
-};
+// function init() {
+//   if (Enabler.isPageLoaded()) {
+//     loadItem();
+//   } else {
+//     Enabler.addEventListener(studio.events.StudioEvent.PAGE_LOADED, loadItem);
+//   }
+// };
 
 
-// setting up init functions
-function loadItem() {
-	console.log('Enabler initialized');
-  definingClickthroughs();
+// // setting up init functions
+// function loadItem() {
+// 	console.log('Enabler initialized');
+//   definingClickthroughs();
+//   animate();
+// }
   animate();
-}
 
 // definng clickthroughs
 function definingClickthroughs () {
@@ -119,7 +120,7 @@ function animate(){
 function checkRestart(){
   var tlLoop = new TimelineMax();
 
-  if(counter<1){
+  if(counter>-1){
     tlLoop
     .to(['.copy3','.end_frame_logo','.endframe_cta','.endframe_text_container'],0.75, {opacity:0,onComplete:restartAnimation},'+=3');
     counter++;

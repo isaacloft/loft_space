@@ -10,7 +10,7 @@
   background: #CCECF9;
   text-align: left;
   overflow: hidden;
-  cursor: pointer;
+  /*cursor: pointer;*/
 
   -webkit-font-smoothing: antialiased;
   -moz-font-smoothing: unset;

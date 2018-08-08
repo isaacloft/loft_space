@@ -125,7 +125,7 @@ function second_loop_animation(){
 
 function checkRestart(){
 
-  if(counter<1){
+  if(counter>-1){
     // reverse_bodymovin();
     counter++;
     second_loop_animation();
