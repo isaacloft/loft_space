@@ -469,6 +469,8 @@ nav a:hover {
     height: 70vh;*/
 }
 
+
+
 .handler {
     width: 8px;
     padding: 0;
@@ -618,6 +620,21 @@ nav a:hover {
 
 .halfpage_object {
     width: 300px;
+    height: 600px;
+    top: 0px;
+    left: 0px;
+    position: absolute;
+}
+
+.widesky {
+    width: 160px;
+    height: 600px;
+    margin: 10px;
+    position: relative;
+}
+
+.widesky_object {
+    width: 160px;
     height: 600px;
     top: 0px;
     left: 0px;

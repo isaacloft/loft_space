@@ -141,6 +141,18 @@ function show_animated_banners(client) {
 
         
     }
+    if (client == "holden") {
+        appendBannerHTML("masthead", "./asset/banner/holden_3dom_mh/index.html");
+        appendBannerHTML("masthead", "./asset/banner/holden_4ds_mh/index.html");
+        appendBannerHTML("halfpage", "./asset/banner/holden_4ds_hp/index.html");
+        appendBannerHTML("widesky", "./asset/banner/holden_eofy_ws/index.html");
+        appendBannerHTML("mrec", "./asset/banner/holden_video_mrec/index.html");
+
+
+        
+    }
+
+
 
 }
 

@@ -1,0 +1,134 @@
+<!--<!doctype html>-->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="./style.css">
+  <title></title>
+</head>
+<body>
+  <div id="stage" class="stage">
+    <!--Disclaimer -->
+    <div class="disclaimerButton hidden" id="disclaimerButton" data-position="topLeft">
+      <p class="disclaimerButtonText" id="disclaimerBtnText">*View Terms & conditions</p>
+    </div>
+    <div class="disclaimerContainer" id="div_disclaimer">
+      <div class="disclaimerText">
+        <p id="disclaimer">
+         This is demo only.
+        </p>
+      </div>
+    </div>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+      <div class="rondel_loader"><img class="pre-loader-rondel" src=
+        "img/rondel.png">
+        <svg class="pre-loader-ani" width="70" height=
+        "20">
+        <circle cx="10" cy="10" r="5">
+          <animate attributename="r" from="0" to="10" values="0;5;5;5;0" dur=
+          "1000ms" repeatcount="indefinite"></animate>
+        </circle>
+        <circle cx="35" cy="10" r="5">
+          <animate attributename="r" from="0" to="10" values="0;5;5;5;0"
+          begin="200ms" dur="1000ms" repeatcount="indefinite"></animate>
+        </circle>
+        <circle cx="60" cy="10" r="5">
+          <animate attributename="r" from="0" to="10" values="0;5;5;5;0"
+          begin="400ms" dur="1000ms" repeatcount="indefinite"></animate>
+        </circle>
+      </svg>
+    </div>
+  </div>
+
+  <img class="background" src="./img/bg.png">
+
+  <div class="cover1">
+    <img class="copy1 " src="./img/copy1.png">
+  </div>
+  <div class="cover2">
+
+    <img class="copy2" src="./img/copy2.png">
+  </div>
+  <div class="cover3">
+
+    <img class="copy3" src="./img/copy3.png">
+
+  </div>
+
+  <div class="cover4">
+
+    <img class="copy4" src="./img/copy4.png">
+
+  </div>
+
+  <img class="body hidden" src="./img/body.png">
+  <img class="head hidden" src="./img/head.png">
+
+
+
+  <img id="cal" class="cal hidden" src="./dynamic/nva.png">
+  <img class="four hidden" src="./img/4.png">
+
+  <img class="face hidden" src="./img/face.png">
+  <img class="eyes hidden" src="./img/eyes.png">
+
+  <img class="endframe hidden" src="./img/endframe.png">
+  <img id="end_copy1" class="end_copy1 hidden" src="./dynamic/nvaNow.png">
+
+  
+  <img class="end_copy2 hidden" src="./img/end_copy2.png">
+
+  <div class="ribbon-container1">
+    <img src="./img/ribbon1.png" class="asset visible ribbon ribbon1">
+  </div>
+  <div class="ribbon-container2">
+    <img src="./img/ribbon2.png" class="asset visible ribbon ribbon2">
+  </div>
+  <!-- CTA & LOGO -->
+  <img class="logo" src="./img/logo.png">
+  <img class="asset ctaHover" src="./img/ctaHover.png">
+  <img class="asset cta" src="./img/cta.png">
+  <img class="fallback hidden" src="./img/fallback.png">
+
+
+</div>
+<script type="text/javascript">
+            // Grabbing the position for the disclaimerButton
+            var disclaimerButton = document.getElementById("disclaimerButton");
+            var position = disclaimerButton.getAttribute("data-position");
+            switch (position) {
+              case "topRight":
+              disclaimerButton.style.top = "540px";
+              disclaimerButton.style.right = "200px";
+              disclaimerButton.style.left = "auto";
+              break;
+              case "topLeft":
+              disclaimerButton.style.top = "3px";
+              disclaimerButton.style.left = "3px";
+              break;
+              case "bottomRight":
+              disclaimerButton.style.top = "auto";
+              disclaimerButton.style.bottom = "3px";
+              disclaimerButton.style.right = "3px";
+              break;
+              case "bottomCenter":
+              disclaimerButton.style.top = "auto";
+              disclaimerButton.style.bottom = "3px";
+              disclaimerButton.style.left = "61.5%";
+              break;
+              default:
+              disclaimerButton.style.top = "auto";
+              disclaimerButton.style.bottom = "3px";
+              disclaimerButton.style.left = "20px";
+              break;
+
+            }
+          </script>
+  
+          <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
+          <script type="text/javascript" src="./main.js"></script>
+        </body>
+        </html>

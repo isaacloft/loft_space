@@ -76,7 +76,7 @@ $(document).ready(function(e) {
 
         log(index_directory, 'Welcome to the <a class="homepage" href="https://www.isaacguan.com" target="_blank">[Loft]</a>. All display banner portfolio will be coming soon');
         log(index_directory, "This site is currently in-use for displaying my most recent work, advertising digital banners.");
-        log(index_directory, "You can type 'help' to view the basic commands navgating in this site");
+        log(index_directory, "You can type &nbsp<p style='color:yellow;'>help</p>&nbsp to view the basic commands navgating in this site");
         // urlvars();
         // log(directory, "For help say '/help'");
         setInterval(favicon, 500);

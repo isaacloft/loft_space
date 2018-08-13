@@ -1,0 +1,143 @@
+<!--<!doctype html>-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="./style.css">
+   
+    <title></title>
+</head>
+<body>
+    <div id="stage" class="stage">
+
+        <!--Disclaimer -->
+        <div class="disclaimerButton" id="disclaimerButton" data-position="custom">
+            <p class="disclaimerButtonText" id="disclaimerBtnText">*Terms and Conditions apply.</p>
+        </div>
+        <div class="disclaimerContainer" id="div_disclaimer">
+
+            <div class="disclaimerText">
+
+                <p id="disclaimer">
+             This is an animated demo.
+                </p>
+            </div>
+        </div>
+
+        <!-- Preloader -->
+        <div class="preloader" id="preloader">
+            <div class="rondel_loader"><img class="pre-loader-rondel" src=
+                "img/rondel.png"> <svg class="pre-loader-ani" width="70" height=
+                "20">
+                <circle cx="10" cy="10" r="5">
+                    <animate attributename="r" from="0" to="10" values="0;5;5;5;0" dur=
+                    "1000ms" repeatcount="indefinite"></animate>
+                </circle>
+                <circle cx="35" cy="10" r="5">
+                    <animate attributename="r" from="0" to="10" values="0;5;5;5;0"
+                    begin="200ms" dur="1000ms" repeatcount="indefinite"></animate>
+                </circle>
+                <circle cx="60" cy="10" r="5">
+                    <animate attributename="r" from="0" to="10" values="0;5;5;5;0"
+                    begin="400ms" dur="1000ms" repeatcount="indefinite"></animate>
+                </circle>
+            </svg></div>
+        </div>
+
+        <img src="./img/frame1.jpg" class="frame1" id="frame1" alt="">
+
+<div class="svgMask">
+    <svg  height="250" width="970" baseProfile="full" version="1.2">
+        <defs>
+            <mask id="svgmask2" maskUnits="userSpaceOnUse" maskContentUnits="userSpaceOnUse" transform="scale(1)">
+                <image id="mask_image2" width="100%" height="100%" xlink:href="./img/mask.png"/>
+            </mask>
+        </defs>
+        <image id="frame2" mask="url(#svgmask2)" width="100%" height="100%" y="0" x="0" src="./img/frame2.jpg"/>
+    </svg>
+</div>
+<div class="svgMask">
+    <svg  height="250" width="970" baseProfile="full" version="1.2">
+        <defs>
+            <mask id="svgmask3" maskUnits="userSpaceOnUse" maskContentUnits="userSpaceOnUse" transform="scale(1)">
+                <image id="mask_image3" width="100%" height="100%" xlink:href="./img/mask.png"/>
+            </mask>
+        </defs>
+        <image id="frame3" mask="url(#svgmask3)" width="100%" height="100%" y="0" x="0" src="./img/frame3.jpg"/>
+    </svg>
+</div>
+
+
+<img src="./img/copy1.png" class="copy1 hidden" id="copy1" alt="">
+<img src="./img/copy2.png" class="copy2 hidden" id="copy2" alt="">
+
+        <!-- Car Moving -->
+        <div class="trax">
+          <img class="car" id="car" src="img/trax.png"/>
+          <img class="wheel_front" id="wheel_front" src="img/wheel_front.png"/>
+          <img class="wheel_back" id="wheel_back" src="img/wheel_back.png"/>
+        </div>
+
+
+        <div class="svgMask">
+            <svg  height="250" width="970" baseProfile="full" version="1.2">
+                <defs>
+                    <mask id="svgmask2" maskUnits="userSpaceOnUse" maskContentUnits="userSpaceOnUse" transform="scale(1)">
+                        <image id="mask_image2" width="100%" height="100%" xlink:href="./img/mask.png"/>
+                    </mask>
+                </defs>
+                <image mask="url(#svgmask2)" width="100%" height="100%" y="0" x="0" xlink:href="./img/frame2.jpg"/>
+            </svg>
+        </div>
+        <div class="svgMask">
+            <svg  height="250" width="970" baseProfile="full" version="1.2">
+                <defs>
+                    <mask id="svgmask3" maskUnits="userSpaceOnUse" maskContentUnits="userSpaceOnUse" transform="scale(1)">
+                        <image id="mask_image3" width="100%" height="100%" xlink:href="./img/mask.png"/>
+                    </mask>
+                </defs>
+                <image mask="url(#svgmask3)" width="100%" height="100%" y="0" x="0" xlink:href="./img/frame3.jpg"/>
+            </svg>
+        </div>
+
+
+        <img src="./img/copy1.png" class="copy1 hidden" id="copy1" alt="">
+        <img src="./img/copy2.png" class="copy2 hidden" id="copy2" alt="">
+        <img src="./img/copy3.png" class="copy3 hidden" id="copy3" alt="">
+
+        <img src="./img/logo.png" class="logo retina" id="logo" alt="">
+        <img src="./img/cta.png" class="cta hidden" id="cta" alt="">
+
+</div>
+<script type="text/javascript">
+        // Grabbing the position for the disclaimerButton
+        var disclaimerButton = document.getElementById("disclaimerButton");
+        var position = disclaimerButton.getAttribute("data-position");
+        switch (position) {
+            case "topRight":
+            disclaimerButton.style.top = "3px";
+            disclaimerButton.style.right = "3px";
+            disclaimerButton.style.left = "auto";
+            disclaimerButton.style.bottom = "auto";
+            break;
+            case "topLeft":
+            disclaimerButton.style.top = "3px";
+            disclaimerButton.style.left = "3px";
+            break;
+            case "bottomRight":
+            disclaimerButton.style.bottom = "3px";
+            disclaimerButton.style.right = "3px";
+            break;
+            default:
+            disclaimerButton.style.bottom = "5px";
+            disclaimerButton.style.right = "10px";
+            break;
+
+        }
+    </script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+    <script type="text/javascript" src="./main.js"></script>
+</body>
+</html>

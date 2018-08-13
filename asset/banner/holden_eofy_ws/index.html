@@ -1,0 +1,98 @@
+<!--<!doctype html>-->
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="./style.css">
+	
+	<title></title>
+</head>
+<body>
+	<div id="stage" class="stage">
+
+		<!--Disclaimer -->
+		<div class="disclaimerButton hidden" id="disclaimerButton" data-position="default">
+			<p class="disclaimerButtonText" id="disclaimerBtnText">*Terms and Conditions apply.</p>
+		</div>
+		<div class="disclaimerContainer" id="div_disclaimer">
+			<div class="disclaimerText">
+				<p id="disclaimer">
+				This is an animated demo.
+				</p>
+			</div>
+		</div>
+
+		<!-- Preloader -->
+		<div class="preloader" id="preloader">
+			<div class="rondel_loader">
+				<img class="pre-loader-rondel" src="img/rondel.png">
+				<svg class="pre-loader-ani" width="70" height="20">
+					<circle cx="10" cy="10" r="5">
+						<animate attributeName="r" from="0" to="10" values="0;5;5;5;0" dur="1000ms" repeatCount="indefinite"></animate>
+					</circle>
+					<circle cx="35" cy="10" r="5">
+						<animate attributeName="r" from="0" to="10" values="0;5;5;5;0" begin="200ms" dur="1000ms" repeatCount="indefinite"></animate>
+					</circle>
+					<circle cx="60" cy="10" r="5">
+						<animate attributeName="r" from="0" to="10" values="0;5;5;5;0" begin="400ms" dur="1000ms" repeatCount="indefinite"></animate>
+					</circle>
+				</svg>
+			</div>
+		</div>
+
+		<img class="frame1" src="./img/frame1.png" >
+		<img class="frame2" src="./img/frame2.png" >
+		<img class="frame3" src="./img/frame3.png" >
+		<img class="frame3_text" src="./img/frame3_text.png" >
+
+
+
+
+
+		<img class="footer" src="./img/footer.png">
+		<img class="ctaHover" src="./img/ctaHover.png">
+
+
+
+	</div>
+	<script type="text/javascript">
+		var disclaimerButton = document.getElementById("disclaimerButton");
+		var position = disclaimerButton.getAttribute("data-position");
+		switch (position) {
+			case "topRight":
+			disclaimerButton.style.top = "3px";
+			disclaimerButton.style.right = "3px";
+			disclaimerButton.style.bottom = "auto";
+			disclaimerButton.style.left = "auto";
+			break;
+			case "topLeft":
+			disclaimerButton.style.top = "2px";
+			disclaimerButton.style.left = "2px";
+			disclaimerButton.style.bottom = "auto";
+			break;
+			case "bottomRight":
+			disclaimerButton.style.top = "auto";
+			disclaimerButton.style.bottom = "4px";
+			disclaimerButton.style.left = "auto";
+			disclaimerButton.style.right = "90px";
+			break;
+			case "topRightLogo":
+			disclaimerButton.style.bottom = "53px";
+			disclaimerButton.style.right = "5px";
+			break;
+			default:
+			disclaimerButton.style.bottom = "5px";
+			disclaimerButton.style.left = "25px";
+			break;
+
+		}
+	</script>
+
+	    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
+	<script type="text/javascript" src="./main.js"></script>
+
+
+</body>
+</html>
